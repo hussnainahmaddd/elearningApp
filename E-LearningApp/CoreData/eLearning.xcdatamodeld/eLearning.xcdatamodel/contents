@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Cart" representedClassName=".Cart" syncable="YES">
+        <attribute name="courseDescription" optional="YES" attributeType="String"/>
+        <attribute name="courseId" optional="YES" attributeType="String"/>
+        <attribute name="courseImage" optional="YES" attributeType="Binary"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Feed" representedClassName=".Feed" syncable="YES">
+        <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="courseDescription" optional="YES" attributeType="String"/>
+        <attribute name="courseImage" optional="YES" attributeType="Binary"/>
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="coursePrice" optional="YES" attributeType="String"/>
+    </entity>
+</model>
