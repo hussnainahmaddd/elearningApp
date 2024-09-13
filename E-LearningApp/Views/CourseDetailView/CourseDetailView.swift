@@ -40,6 +40,7 @@ struct CourseDetailView: View {
     @Binding var price :  String
     @Environment(\.managedObjectContext) var moc
     let width = UIScreen.screenWidth/2-20
+    @State var enrollUser : Bool = false
     var body: some View {
         VStack{
             
@@ -105,10 +106,22 @@ struct CourseDetailView: View {
                         
                     
                         HStack{
-                            Image("green-tick")
-                            Text("Availible")
-                                .font(.caption)
-                                .foregroundColor(Color.greyColor)
+                            if enrollUser{
+                                Image("green-tick")
+                                Text("Availible")
+                                    .font(.caption)
+                                    .foregroundColor(Color.greyColor)
+                            }
+                            else
+                            {
+                                Text("enroll user")
+                                    .underline()
+                                    .font(.caption)
+                                    .foregroundColor(Color.black)
+                                    .onTapGesture {
+                                        self.enrollUser.toggle()
+                                    }
+                            }
                                 
                         }
                     }

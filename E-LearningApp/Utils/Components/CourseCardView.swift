@@ -21,7 +21,7 @@ struct CourseCardView: View {
     
     
     var body: some View {
-        ZStack() {
+        ZStack {
             RoundedRectangle(cornerRadius: 5)
                 .fill(Color.whiteColor)
                 .frame(width: width, height: height)
@@ -59,6 +59,13 @@ struct CourseCardView: View {
                     }
                    
                 }
+              
+                    
+                ShareLink(item: URL(string: "https://meet.google.com/wks-ipxe-vph")!)
+                {
+                    Label("Share", systemImage: "green-tick")
+                }
+                
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 8)
@@ -68,6 +75,23 @@ struct CourseCardView: View {
         
     }
     
+    func shareAURL()
+    {
+        guard let someURL = URL(string: "https://meet.google.com/wks-ipxe-vph") else {
+            print("if no url found")
+            return
+        }
+        if UIApplication.shared.canOpenURL(someURL)
+        {
+            UIApplication.shared.open(someURL)
+        }
+        else
+        {
+            print("didn't work")
+        }
+    }
 }
+    
+
 
 
